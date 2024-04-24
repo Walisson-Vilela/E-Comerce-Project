@@ -2,6 +2,7 @@ import { Header } from './components/Header'
 import './App.css'
 import { Hero } from './components/Hero'
 
+
 function App() {
 
 
@@ -9,6 +10,7 @@ function App() {
     <div className='App'>
       <Header name='Blog do Walisson' />
       <Hero />
+
     </div>
   )
 }
