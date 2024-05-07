@@ -1,22 +1,32 @@
-interface IProps {
-    name: string;
+import { useState } from 'react';
+import './styles.css';
+
+
+interface Iprops {
+    nameCompany: string;
 }
 
-const Header = ({ name }: IProps) => {
+const Header = ({nameCompany}: Iprops) => {
+
+    const [name, setName] = useState('Walisson')
+
     return (
-        <nav className='w-full flex justify-between items-center p-5 border-b border-stone bg-gray-700'>
-            <span className='mx-2 text-white'>{name}</span>
-            <ul className='flex items-center'>
-                <li className='mx-2 text-white'>Features</li>
-                <li className='mx-2 text-white'>Premium</li>
-                <li className='mx-2 text-white'>Suporte</li>
+
+        <nav className='w-full flex justify-between items-center p-5 bg-white shadow-xl'>
+            <span>{name}</span>
+            <ul style={{ display: 'flex' }}>
+                <li>Features</li>
+                <li>Premium</li>
+                <li>Suporte</li>
                 <li>
-                    <button className='text-grey-700' >
+                    <button>
                         Cadastro
                     </button>
                 </li>
-            </ul>
-        </nav>
+            </ul >
+            <button onClick={() => setName('Vilela')} >Clicar aqui</button>
+        </nav >
+
     );
 }
 
